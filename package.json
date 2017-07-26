@@ -34,7 +34,10 @@
   "dependencies": {
     "geojson-stream": "0.0.1",
     "minimist": "^1.2.0",
+    "package.json": "^2.0.1",
     "through2": "^2.0.0",
+    "turf-extent": "^1.0.4",
+    "turf-inside": "^3.0.12",
     "turf-random": "^1.0.2"
   },
   "repository": {

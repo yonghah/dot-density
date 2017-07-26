@@ -9,6 +9,7 @@ let random = require('./random')
  * @param {String|FeaturePopulationCallback} options.population the property key or accessor function providing each feature's population.
  * @param {number} [options.sampleRate=1] Number of dots per person
  * @param {boolean} [options.stochastic=false] If true, then use a weighted dice roll to decide wwhether to add a point when population * sampleRate yields a fractional value.
+ * @param {String} [options.tag=''] Tag for this file
  * @returns {FeatureCollection} A dot density FeatureCollection
  * @example
  * var dots = require('dot-density')
@@ -38,7 +39,7 @@ module.exports = function dotdensity (data, options) {
     }
 
     while (count-- > 0) {
-      dots.push(random(data))
+      dots.push(random(data, options.tag))
     }
   } else {
     throw new Error('Input data is not a Feature, array of Features, or FeatureCollection')

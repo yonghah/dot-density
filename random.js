@@ -10,12 +10,14 @@ module.exports = function randomPointInside (feature, tag, value) {
   let tries = 1000
   do {
     point = random('point', 1, opts).features[0]
-    if (tag) { 
-      point["properties"] = {'tag':tag}
+    let p = {}
+    if (tag) {
+      p["tag"] = tag
     } 
     if (value) { 
-      point["properties"] = {'value':value}
+      p["value"] = value
     }
+    point["properties"] = p
   } while (!inside(point, feature) && tries-- > 0)
   return point
 }

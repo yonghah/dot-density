@@ -4,6 +4,8 @@
 
 `npm install -g dot-density` for CLI or `npm install --save dot-density` for use as library.
 
+Use `npm link` for command line.
+
 ## CLI
 
     cat someCensusData.geojson | dot-density --population POP10 --sampleRate 0.1
@@ -30,6 +32,7 @@ Produce dot density from population polygons
     -   `options.sampleRate` **[number]** Number of dots per person (optional, default `1`)
     -   `options.stochastic` **[boolean]** If true, then use a weighted dice roll to decide wwhether to add a point when population * sampleRate yields a fractional value. (optional, default `false`)
     -   `options.tag` **[String]** Tag for this file (optional, default `''`)
+    -   `options.value` **[number]** value for this file (optional, default `null`)
 
 **Examples**
 
